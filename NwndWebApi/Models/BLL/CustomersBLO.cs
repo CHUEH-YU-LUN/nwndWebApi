@@ -34,6 +34,7 @@ namespace NwndWebApi.Models.BLL
                     City = inCustomers.City,
                     Region = inCustomers.Region,
                     PostalCode = inCustomers.PostalCode,
+                    Country = inCustomers.Country,
                     Phone = inCustomers.Phone,
                     Fax = inCustomers.Fax
                 };
@@ -85,6 +86,7 @@ namespace NwndWebApi.Models.BLL
                     City = inCustomers.City,
                     Region = inCustomers.Region,
                     PostalCode = inCustomers.PostalCode,
+                    Country = inCustomers.Country,
                     Phone = inCustomers.Phone,
                     Fax = inCustomers.Fax
                 };
