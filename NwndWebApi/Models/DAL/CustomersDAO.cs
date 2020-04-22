@@ -31,7 +31,7 @@ namespace NwndWebApi.Models.DAL
             }
         }
 
-        public void DeleteCustomers(int id)
+        public void DeleteCustomers(string id)
         {
             try
             {

@@ -31,7 +31,7 @@ namespace NwndWebApi.Models.DAL
             }
         }
 
-        public void DeleteEmployeeTerritories(int EmployeeID,int TerritorID)
+        public void DeleteEmployeeTerritories(int EmployeeID,string TerritorID)
         {
             try
             {

@@ -11,6 +11,6 @@ namespace NwndWebApi.Repository.DAL
         IEnumerable<CustomerCustomerDemo> GetCustomerCustomerDemo();
         void CreateCustomerCustomerDemo(CustomerCustomerDemo customerCustomerDemo);
         void UpdateCustomerCustomerDemo(CustomerCustomerDemo customerCustomerDemo);
-        void DeleteCustomerCustomerDemo(int CustomerID,int CustomerTypeID);
+        void DeleteCustomerCustomerDemo(string CustomerID,string CustomerTypeID);
     }
 }

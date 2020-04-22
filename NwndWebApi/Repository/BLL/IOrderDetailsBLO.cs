@@ -1,16 +1,17 @@
 ﻿using NwndWebApi.Models.DTO;
+using NwndWebApi.ViewModels.UniForm;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace NwndWebApi.Repository.DAL
+namespace NwndWebApi.Repository.BLL
 {
-    public interface IOrderDetailsDAO
+    public interface IOrderDetailsBLO
     {
         IEnumerable<OrderDetails> GetOrderDetails();
-        void CreateOrderDetails(OrderDetails orderDetails);
-        void UpdateOrderDetails(OrderDetails orderDetails);
+        void CreateOrderDetails(inOrderDetails inOrderDetails);
+        void UpdateOrderDetails(inOrderDetails inOrderDetails);
         void DeleteOrderDetails(int OrderID,int ProductID);
     }
 }

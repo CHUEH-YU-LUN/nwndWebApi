@@ -11,6 +11,6 @@ namespace NwndWebApi.Repository.DAL
         IEnumerable<EmployeeTerritories> GetEmployeeTerritories();
         void CreateEmployeeTerritories(EmployeeTerritories employeeTerritories);
         void UpdateEmployeeTerritories(EmployeeTerritories employeeTerritories);
-        void DeleteEmployeeTerritories(int EmployeeID,int TerritorID);
+        void DeleteEmployeeTerritories(int EmployeeID,string TerritorID);
     }
 }

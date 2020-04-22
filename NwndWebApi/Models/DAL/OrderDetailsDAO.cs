@@ -31,11 +31,11 @@ namespace NwndWebApi.Models.DAL
             }
         }
 
-        public void DeleteOrderDetails(int id)
+        public void DeleteOrderDetails(int OrderID,int ProductID)
         {
             try
             {
-                var _OrderDetails = _context.OrderDetails.Find(id);
+                var _OrderDetails = _context.OrderDetails.Find(OrderID,ProductID);
                 _context.OrderDetails.Remove(_OrderDetails);
                 _context.SaveChanges();
             }

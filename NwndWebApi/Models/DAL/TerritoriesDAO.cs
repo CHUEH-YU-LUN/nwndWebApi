@@ -29,7 +29,7 @@ namespace NwndWebApi.Models.DAL
             }
         }
 
-        public void DeleteTerritories(int id)
+        public void DeleteTerritories(string id)
         {
             try
             {
