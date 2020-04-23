@@ -59,6 +59,20 @@ namespace NwndWebApi.Models.DAL
             }
         }
 
+        public int GetCategoryID(string CategoriesName)
+        {
+            try
+            {
+                var result = _context.Categories.FirstOrDefault(x => x.CategoryName == CategoriesName);
+
+                return result.CategoryId;
+            }
+            catch (Exception e)
+            {
+                throw new Exception();
+            }
+        }
+
         public void UpdateCategories(Categories categories)
         {
             try

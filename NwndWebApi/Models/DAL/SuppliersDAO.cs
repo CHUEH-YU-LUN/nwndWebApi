@@ -45,6 +45,20 @@ namespace NwndWebApi.Models.DAL
             }
         }
 
+        public int GetSupplierID(string CompanyName)
+        {
+            try
+            {
+                var result = _context.Suppliers.FirstOrDefault(x => x.CompanyName == CompanyName);
+
+                return result.SupplierId;
+            }
+            catch (Exception e)
+            {
+                throw new Exception();
+            }
+        }
+
         public IEnumerable<Suppliers> GetSuppliers()
         {
             try

@@ -49,7 +49,10 @@ namespace NwndWebApi.Models.DAL
         {
             try
             {
-                IEnumerable<Products> _Products = from x in _context.Products select x;
+                IEnumerable<Products> _Products = from x in _context.Products.AsEnumerable()
+                                                  join y in _context.Suppliers on x.SupplierId equals y.SupplierId
+                                                  join z in _context.Categories on x.CategoryId equals z.CategoryId
+                                                  select x;
 
                 return _Products;
             }

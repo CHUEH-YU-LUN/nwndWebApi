@@ -14,10 +14,14 @@ namespace NwndWebApi.Models.BLL
     public class ProductsBLO : IProductsBLO
     {
         private IProductsDAO iProductsDAO;
+        private ISuppliersDAO iSuppliersDAO;
+        private ICategoriesDAO iCategoriesDAO;
 
-        public ProductsBLO(IProductsDAO _iProductsDAO)
+        public ProductsBLO(IProductsDAO _iProductsDAO, ISuppliersDAO _iSuppliersDAO, ICategoriesDAO _iCategoriesDAO)
         {
             iProductsDAO = _iProductsDAO;
+            iSuppliersDAO = _iSuppliersDAO;
+            iCategoriesDAO = _iCategoriesDAO;
         }
 
         public void CreateProducts(inProducts inProducts)
@@ -28,8 +32,8 @@ namespace NwndWebApi.Models.BLL
                 {
                     ProductId = inProducts.ProductId,
                     ProductName = inProducts.ProductName,
-                    SupplierId = inProducts.SupplierId,
-                    CategoryId = inProducts.CategoryId,
+                    SupplierId = iSuppliersDAO.GetSupplierID(inProducts.Supplier_CompanyName),
+                    CategoryId = iCategoriesDAO.GetCategoryID(inProducts.CategoryName),
                     QuantityPerUnit = inProducts.QuantityPerUnit,
                     UnitPrice = inProducts.UnitPrice,
                     UnitsInStock = inProducts.UnitsInStock,
@@ -78,8 +82,8 @@ namespace NwndWebApi.Models.BLL
                 {
                     ProductId = inProducts.ProductId,
                     ProductName = inProducts.ProductName,
-                    SupplierId = inProducts.SupplierId,
-                    CategoryId = inProducts.CategoryId,
+                    SupplierId = iSuppliersDAO.GetSupplierID(inProducts.Supplier_CompanyName),
+                    CategoryId = iCategoriesDAO.GetCategoryID(inProducts.CategoryName),
                     QuantityPerUnit = inProducts.QuantityPerUnit,
                     UnitPrice = inProducts.UnitPrice,
                     UnitsInStock = inProducts.UnitsInStock,

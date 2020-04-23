@@ -12,5 +12,6 @@ namespace NwndWebApi.Repository.DAL
         void CreateSuppliers(Suppliers suppliers);
         void UpdateSuppliers(Suppliers suppliers);
         void DeleteSuppliers(int id);
+        int GetSupplierID(string CompanyName);
     }
 }

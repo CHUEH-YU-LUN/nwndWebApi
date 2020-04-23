@@ -12,5 +12,6 @@ namespace NwndWebApi.Repository.DAL
         void CreateCategories(Categories categories);
         void UpdateCategories(Categories categories);
         void DeleteCategories(int id);
+        int GetCategoryID(string CategoriesName);
     }
 }
